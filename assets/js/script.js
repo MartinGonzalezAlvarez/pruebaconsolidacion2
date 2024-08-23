@@ -1,21 +1,32 @@
-// Selecciona el formulario y el botón de envío
-const form = document.querySelector('form');
-const submitButton = document.querySelector('button[type="submit"]');
-
-// Añade un evento de escucha para cuando el formulario se envíe
-form.addEventListener('submit', function(event) {
-      // Previene el comportamiento por defecto del formulario
+//  se carga el contenido del DOM
+document.addEventListener('DOMContentLoaded', function() {
+//Elementos del formulario
+    const form = document.getElementById('formulario');
+    const nombreInput = document.querySelector('input[name="nombre"]');
+    const emailInput = document.querySelector('input[name="email"]');
+    const
+mensajeTextarea = document.querySelector('textarea[name="mensaje"]');
+    const submitButton = form.querySelector('button[type="submit"]'); // Obtén el botón de envío
+// Agregamos un event listener para el evento 'submit' del formulario
+    form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-      // Cambia el texto del botón a "Enviando..."
-    submitButton.textContent = "Enviando...";
-
-      // Simula el envío del formulario (aquí podrías integrar con un backend real)
-    setTimeout(() => {
-          // Cambia el texto del botón a "¡Mensaje Enviado!"
-        submitButton.textContent = "¡Mensaje Enviado!";
-
-          // Aquí podrías reiniciar el formulario si fuera necesario
-          // form.reset();
-    }, 2000);
+      // Validación básica
+    if (nombreInput.value.trim() === '') {
+        alert('Por favor, ingresa tu nombre.');
+        return;
+    }
+    if (emailInput.value.trim() === '') {
+        alert('Por favor, ingresa tu correo electrónico.');
+        return;
+    }
+    if (mensajeTextarea.value.trim() === '') {
+        alert('Por favor, ingresa un mensaje.');
+        return;
+    }
+      // Si todo está bien, mostrar mensaje de éxito y bloquear el formulario
+    alert('¡Formulario enviado con éxito!');
+    form.reset(); 
+      submitButton.disabled = true; // Deshabilita el botón de envío
+    });
 });

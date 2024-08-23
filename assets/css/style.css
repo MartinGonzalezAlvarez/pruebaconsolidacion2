@@ -1,8 +1,18 @@
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/toons/too-7/too666.cur), auto !important;} /* End https://www.cursors-4u.com */
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    border-bottom: 1px solid #f1e682; /* borde header */
+    cursor: url('ruta/a/tu/imagen.png'), auto; 
+}
+#miheader {
+    border-bottom: 1px solid #f1e682; /* borde header */
+}
+h1, h2 {
+    color: #320E3B; /* COLOR DE TITULOS */
 }
 
 .card-img-top {
@@ -18,4 +28,43 @@ p{
     background-image: url("assets/img/login.png"); /* Ruta a la imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el header */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.card {
+    border: 2px solid #b7bee0; /* Borde dorado */
+}
+.list-group-item {
+    border-color: #b7bee0; /* Borde dorado */
+}
+
+/*DISEÑO DE BOTONES*/
+.btn-primary {
+    background-color: #6B7FD7; /* Fondo rojo */
+    border-color: #b7bee0; /* Borde dorado */
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #6B7FD7; /* Fondo dorado al pasar el mouse */
+}
+.btn:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+    transition: transform 0.2s ease-in-out; /* Transición suave */
+}
+/**/
+
+.form-control {
+    border-color: #b7bee0; /* Borde dorado */
+}
+
+
+/*COMPONENTES UN POCO MAS AVANZADOS QUE ENCONTRE LLAMATIVOS (Animacion al Fondo del logo)*/
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #ffef5c; }
+    50% { box-shadow: 0 0 20px #ffef5c, 0 0 30px #657a80; }
+    100% { box-shadow: 0 0 5px #ffef5c; }
+}
+
+img[alt="Logo"] {
+    animation: glow 2s infinite; /* Animación de resplandor */
+    border-radius: 50%; /* Hacer el logo circular */
 }
