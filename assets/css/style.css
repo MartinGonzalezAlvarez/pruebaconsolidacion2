@@ -31,20 +31,20 @@ p{
 }
 
 .card {
-    border: 2px solid #b7bee0; /* Borde dorado */
+    border: 2px solid #b7bee0;
 }
 .list-group-item {
-    border-color: #b7bee0; /* Borde dorado */
+    border-color: #b7bee0; 
 }
 
 /*DISEÑO DE BOTONES*/
 .btn-primary {
-    background-color: #6B7FD7; /* Fondo rojo */
-    border-color: #b7bee0; /* Borde dorado */
+    background-color: #6B7FD7; 
+    border-color: #b7bee0; 
     color: #ffffff;
 }
 .btn-primary:hover {
-    background-color: #6B7FD7; /* Fondo dorado al pasar el mouse */
+    background-color: #6B7FD7;
 }
 .btn:hover {
     transform: scale(1.05); /* Aumentar ligeramente el tamaño */
@@ -53,7 +53,7 @@ p{
 /**/
 
 .form-control {
-    border-color: #b7bee0; /* Borde dorado */
+    border-color: #b7bee0; 
 }
 
 
